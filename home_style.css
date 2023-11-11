@@ -124,6 +124,7 @@ justify-content: space-between;
     color: white;
     background-color: #CD0000;
     border: none;
+    transition: all 1s;
 }
 .learn_more_button{
     width: 98px;
@@ -133,22 +134,110 @@ justify-content: space-between;
     border-bottom:solid #CD0000 4px;
     transition: all 0.5s;
 }
+.product_button:hover{
+    font-weight: 800;
+    /* border-bottom: solid #CD0000 6px; */
+    transition: all 0.5s;
+    letter-spacing: 0.08cm;
+    animation: productButton forwards 1s;
+}
+@keyframes productButton {
+    0%{
+        background-color: #CD0000;
+    }
+    50%{
+        background-color: #ffffff;
+        color: #CD0000;
+    }
+    100%{
+        background-color: #CD0000;
+    }
+}
 .learn_more_button:hover{
     font-weight: 800;
     border-bottom: solid #CD0000 6px;
     transition: all 0.5s;
 }
 
+  .carousel_new_items {
+    display: none;
+  }
+
+
 /* Main Content Styles */
 main {
     padding: 1em 0;
 }
 
-.product-card {
-    border: 1px solid #ddd;
-    padding: 1em;
-    margin-bottom: 1em;
+ .new_arrivals_page {
+     width: 100%;
+     height: 1537px;
+     /* background-color: #CD0000; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 15px 5px;
+ }
+ .new_arrivals_page h2{
+    color: #CD0000;
+ }
+  .new_arrivals_page p {
+      color: rgb(169, 169, 169);
+  }
+ 
+ .product_cards_container{
+    height: 1400px;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+ }
+
+.product1_container,
+.product2_container,
+.product3_container,
+.product4_container {
+    background-color: white;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px 0px rgba(219, 219, 219, 0.75);
+    transition: all 1s;
 }
+
+.product1_container:hover,
+.product2_container:hover,
+.product3_container:hover,
+.product4_container:hover {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 2px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s;
+}
+
+ .product_cards_container img{
+    width: 50%;
+    transition: all 2s;
+ }
+ .product_cards_container img:hover{
+    width: 60%;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+ }
+ .product_cards_container .description{
+    font-weight: 800;
+ }
+
 
 
 
@@ -217,6 +306,10 @@ main {
             display: none;
         }
 
+  
+
+
+
 /* start landing page */
                 .landing_page {
                     background: url(./images/middleBarDesktop.svg);
@@ -254,15 +347,92 @@ main {
                     justify-content: space-between;
                                 }
 
-                .carosel_new_items{
-                    background-color: #444;
-                    width: 529px;
-                    height: 586px;
-                    align-self: center;
-                    margin-left: 150px;
-                }
+/* START carousel style code */
+                  .carousel_new_items {
+                      display: unset;
+                      /* background-color: #444; */
+                      width: 529px;
+                      height: 586px;
+                      align-self: center;
+                      display: flex;
+                      flex-direction: column;
+                      margin-left: 150px;
+                  }
+        
+                  .carousel-container {
+                      max-width: 100%;
+                      overflow: hidden;
+                  }
+        
+                  .carousel {
+                      display: flex;
+                      transition: transform 0.5s ease-in-out;
+                  }
+        
+                  .carousel-item {
+                      min-width: 100%;
+                  }
+        
+                  .navigation {
+                      width: 50%;
+                      /* background-color: #CD0000; */
+                      align-self: center;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: space-around;
+                      cursor: pointer;
+                  }
+/* END carousel style code */
 
-    .product-card {
-        padding: 1em;
-    }
+
+
+/* START new arrivals page */
+
+  .new_arrivals_page {
+      width: 100%;
+      height: 650px;
+      background-color: #CD0000;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px 0px 30px 0px;
+  }
+  .new_arrivals_page h2{
+    color: white;
+  }
+  .new_arrivals_page p{
+    color: white;
+    font-size: 4rem;
+  }
+  .product_cards_container{
+    height: 400px;
+    width: 100% ;
+    background-color: #CD0000;
+    flex-direction: row;
+    padding: 0px 0px;
+  }
+
+  .product1_container,
+  .product2_container,
+  .product3_container,
+  .product4_container {
+      padding: 0px 15px;
+      border-radius: 10px;
+      box-shadow: 2px 10px 15px 0px rgba(68, 10, 10, 0.75);
+      transition: all 1s;
+  }
+
+  .product1_container:hover,
+  .product2_container:hover,
+  .product3_container:hover,
+  .product4_container:hover {
+      width: 250px;
+      height: 380px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.935);
+      box-shadow: 2px 10px 10px 0px rgba(0, 0, 0, 0.75);
+      transition: all 0.5s;
+  }
+
+   
+
 }
