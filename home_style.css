@@ -202,7 +202,7 @@ main {
 .product4_container {
     background-color: white;
     width: 220px;
-    height: 320px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,10 +238,261 @@ main {
     font-weight: 800;
  }
 
+/* start of about page styling */
+.about_page{
+    width: 100%;
+    height: 3177px;
+    border: solid saddlebrown 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+/* 'get a discount on our best products !' */
+.about_page h2{
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: #CD0000;
+    text-align: center;
+}
+/* 'what can we help you with?' */
+.about_page h3{
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #CD0000;
+    letter-spacing: 0.04cm;
+}
+.divider{
+    width: 279px;
+    height: 3.4px;
+    background-color: #CD0000;
+}
 
+.category_tv_and_music h3,
+.category_fridges_and_freezers h3,
+.category_kitchen_appliances h3,
+.category_air_conditioners h3{
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #CD0000;
+    letter-spacing: 0.04cm;
+    text-align: center;
+    transition: all 1s;
+}
+.category_tv_and_music h3:hover, 
+.category_fridges_and_freezers h3:hover,
+.category_kitchen_appliances h3:hover,
+.category_air_conditioners h3:hover{
+    cursor: pointer;
+    font-weight: 800;
+    transition: all 0.5s;
+}
+.about_page p {
+    font-size: 2rem;
+    font-weight: 200;
+    color: rgb(150, 150, 150);
+}
+.meku_van_graphic{
+    width: 192px;
+    height: 60px;
+}
+.see_all_button{
+    width: 188px;
+    height: 44px;
+    background-color: #CD0000;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 1s;
+}
+.see_all_button:hover{
+    cursor: pointer;
+    font-weight: 800;
+    /* border-bottom: solid #CD0000 6px; */
+    transition: all 0.5s;
+    letter-spacing: 0.08cm;
+    animation: seeAllButton forwards 1s;
+}
+@keyframes seeAllButton {
+    0% {
+        background-color: #CD0000;
+    }
 
+    50% {
+        background-color: #ffffff;
+        color: #CD0000;
+    }
 
+    100% {
+        background-color: #CD0000;
+    }
+}
 
+/* about card section */
+.about_meku_card_container{
+    width:95%;
+    height: auto;
+    /* border: solid red 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about_card{
+    width: 95%;
+    /* height: ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #CD0000;
+}
+.meku_avatar_dp{
+    width: 77px;
+    height: 77px;
+    border-radius:50%;
+    border: solid white 1px;
+    background: url(./images/mekuAvatar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+    margin-top: -50px;
+}
+.about_card h4{
+    font-size: larger;
+    color: white;
+    text-align: unset;
+    align-self: self-start;
+    margin-left: 10px;
+    border-bottom: solid white 5px;
+}
+.about_card p {
+    color: white;
+}
+.about_card .signature{
+    font-weight:100;
+    letter-spacing: 1.5px;
+    align-self: flex-end;
+    color: white;
+}
+.location_container{
+    width: 100%;
+    height: auto;
+    /* border: solid yellow 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(./images/locationBackgroundDesktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-position-y: 100px;
+}
+.location_graphic{
+    width: 25px;
+    height: 46px;
+    background: url(./images/locationMarkMobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.map{
+    width: 60%;
+    height: auto;
+    transition: all 1s;
+}
+.map:hover{
+    width: 80%;
+    cursor: grab;
+    transition: all 0.5s;
+
+}
+.location_description p{
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+.testimonials_container{
+    width: 100%;
+    height: 313px;
+    /* border: solid blue 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.google_testimonials{
+    width: 90%;
+    height: 200px;
+    /* border: solid blue 1px; */
+    background: url(./images/testimonialCards.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+/* end of about page styling */
+
+/* START of footer*/
+footer{
+    height: 468px;
+    background-color: #CD0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.white_bar{
+    width: 100%;
+    height: 6.7px;
+    background-color: white;
+    justify-self: flex-start;
+
+}
+footer h1{
+    font-size: 2rem;
+    color: white;
+}
+
+.star_bar_divider{
+    width: 80%;
+    height: 20px;
+    background: url(./images/starBar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+footer p {
+    color: white;
+}
+.social_container{
+    width: 150px;
+    height: 33px;
+    /* border: solid white 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.social{
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid white 1px;
+    text-align: center;
+}
+.end_point_copyright{
+    color: white;
+}
+.end_point_copyright a{
+    color: yellow;
+    text-decoration: none;
+    transition: all 0.8s;
+}
+.end_point_copyright a:hover {
+    letter-spacing: 0.08cm;
+    transition: all 0.5s;
+}
 /*  /////////////////////////////////// Responsive Styles/////////////////////////////////// */
 
 @media only screen and (min-width: 480px) {
@@ -433,6 +684,24 @@ main {
       transition: all 0.5s;
   }
 
-   
+  /* location styles */
+
+   .location_container {
+        width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(./images/locationBackgroundDesktop.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            background-position-y: 50px;
+   }
+    /* testimonials */
+   .google_testimonials {
+       background-size: 50%;
+   }
 
 }
