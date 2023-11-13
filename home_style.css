@@ -76,7 +76,7 @@ nav a:hover {
     width: 40%;
     height: 100%;
     /* set to display: none; while adjusting home (other component) styling */
-    display: unset;
+    display: none;
     /* toggled to display (flex) instead of (none) */
     flex-direction: column;
     align-items: center;
