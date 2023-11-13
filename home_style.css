@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -56,32 +59,45 @@ nav a:hover {
 
 /* toggels menu */
  .dropdown_menu_bar {
-     width: 20px;
+     width: 30px;
      height: 10px;
      background-color: white;
+     background: url(./images/menuButton.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+    background-size: contain;
+    transition: all 1s;
  }
-
+ 
 /* menu hidden until toggled with (dropdown menu bar) */
+
+
 .menu{
+    width: 40%;
     height: 100%;
     /* set to display: none; while adjusting home (other component) styling */
-    display: none;
+    display: unset;
     /* toggled to display (flex) instead of (none) */
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    background-color: #444;
+    background-color: #44444465;
     position: fixed;
-    top: -19px;
+    top: 55px;
     left: 50%;
-    width: 40%;
     z-index: 2;
     list-style: none;
 }
 .menu a{
+    color: white;
     font-size: large;
-    border: solid #444 0.2px;
+    text-decoration: unset;
+    border: none;
+    transition: all 0.8s;
+}
+.menu a:hover{ 
+    transition: all 0.5s;
 }
 .menu li{
     padding: 1em;
@@ -476,7 +492,9 @@ footer p {
     flex-direction: row;
     justify-content: space-around;
 }
-.social{
+.social_facebook,
+.social_instagram{
+    cursor: pointer;
     width: 33px;
     height: 33px;
     border-radius: 50%;
@@ -484,6 +502,20 @@ footer p {
     border: solid white 1px;
     text-align: center;
 }
+.social_facebook{
+    background: url(./images/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.social_instagram{
+    background: url(./images/Instagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
 .end_point_copyright{
     color: white;
 }
@@ -517,7 +549,7 @@ footer p {
     /* Adjust styles for laptops and larger devices */
    
         nav {
-            height: 40px;
+            height: 10px;
             color: white;
             display: flex;
             justify-content: space-around;

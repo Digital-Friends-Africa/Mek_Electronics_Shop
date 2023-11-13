@@ -1,0 +1,417 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    transition: all 1s;
+    background: url(./images/mekuPageUnderConstructionMobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/* Navigation Styles */
+nav {
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    background-color: #CD0000;
+    padding: 1em 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+nav h2 {
+    font-weight: 200;
+}
+
+.nav_links {
+    width: 415px;
+    /* background-color: black; */
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    margin-left: 25%;
+}
+
+nav a {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: solid #CD0000 0.1px;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    font-weight: 900;
+    border-bottom: solid white 3px;
+    transition: all 0.3s;
+}
+
+/* toggels menu */
+.dropdown_menu_bar {
+    width: 30px;
+    height: 10px;
+    background-color: white;
+    background: url(./images/menuButton.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 1s;
+}
+
+/* menu hidden until toggled with (dropdown menu bar) */
+
+
+.menu {
+    width: 40%;
+    height: 100%;
+    /* set to display: none; while adjusting home (other component) styling */
+    display: unset;
+    /* toggled to display (flex) instead of (none) */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #44444465;
+    position: fixed;
+    top: 55px;
+    left: 50%;
+    z-index: 2;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    font-size: large;
+    text-decoration: unset;
+    border: none;
+    transition: all 0.8s;
+}
+
+.menu a:hover {
+    transition: all 0.5s;
+}
+
+.menu li {
+    padding: 1em;
+    text-align: start;
+}
+
+
+/*  /////////////////////////////////// Responsive Styles/////////////////////////////////// */
+
+@media only screen and (min-width: 480px) {
+
+    /* styles adjusted for larger screens i.e. tablets and larger devices */
+    body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 100vh;
+            transition: all 1s;
+            background: url(./images/mekuPageUnderConstruction.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Adjust styles for laptops and larger devices */
+   
+        nav {
+            height: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            background-color: #CD0000;
+            padding: 1em 0;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .nav_links {
+            width: 415px;
+            /* background-color: black; */
+            display: flex;
+            justify-content: space-between;
+            margin-left: 25%;
+        }
+    
+        nav a {
+            font-size: 15px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: solid #CD0000 0.1px;
+            transition: all 0.5s;
+        }
+    
+        nav a:hover {
+            font-weight: 900;
+            border-bottom: solid white 5px;
+            transition: all 0.3s;
+        }
+
+        .dropdown_menu_bar{
+            display: none;
+            width: 20px;
+            height: 10px;
+            background-color: white;
+        }
+        .menu{
+            display: none;
+        }
+
+  
+
+
+
+/* start landing page */
+                .landing_page {
+                    background: url(./images/middleBarDesktop.svg);
+                    background-repeat: no-repeat;
+                    background-size:1006px;
+                    background-position: center;
+                    /* border: solid yellow 3px; */
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: end;
+                    justify-content: start;
+                    margin-top: -20px;
+                }
+
+                .M_logo_and_action_buttons_container {
+                    width: 718px;
+                    height: 706px;
+                    /* border: solid red 2px; */
+                    background: url(./images/MekuElectronicsShopLogoDesktop.svg);
+                    background-repeat: no-repeat;
+                    background-size: 699px;
+                
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 1s;
+                }
+
+                .action_buttons_landing {
+                    width: 250px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                                }
+
+/* START carousel style code */
+                  .carousel_new_items {
+                      display: unset;
+                      /* background-color: #444; */
+                      width: 529px;
+                      height: 586px;
+                      align-self: center;
+                      display: flex;
+                      flex-direction: column;
+                      margin-left: 150px;
+                  }
+        
+                  .carousel-container {
+                      max-width: 100%;
+                      overflow: hidden;
+                  }
+        
+                  .carousel {
+                      display: flex;
+                      transition: transform 0.5s ease-in-out;
+                  }
+        
+                  .carousel-item {
+                      min-width: 100%;
+                  }
+        
+                  .navigation {
+                      width: 50%;
+                      /* background-color: #CD0000; */
+                      align-self: center;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: space-around;
+                      cursor: pointer;
+                  }
+/* END carousel style code */
+
+
+
+/* START new arrivals page */
+
+  .new_arrivals_page {
+      width: 100%;
+      height: 650px;
+      background-color: #CD0000;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px 0px 30px 0px;
+  }
+  .new_arrivals_page h2{
+    color: white;
+  }
+  .new_arrivals_page p{
+    color: white;
+    font-size: 4rem;
+  }
+  .product_cards_container{
+    height: 400px;
+    width: 100% ;
+    background-color: #CD0000;
+    flex-direction: row;
+    padding: 0px 0px;
+  }
+
+  .product1_container,
+  .product2_container,
+  .product3_container,
+  .product4_container {
+      padding: 0px 15px;
+      border-radius: 10px;
+      box-shadow: 2px 10px 15px 0px rgba(68, 10, 10, 0.75);
+      transition: all 1s;
+  }
+
+  .product1_container:hover,
+  .product2_container:hover,
+  .product3_container:hover,
+  .product4_container:hover {
+      width: 250px;
+      height: 380px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.935);
+      box-shadow: 2px 10px 10px 0px rgba(0, 0, 0, 0.75);
+      transition: all 0.5s;
+  }
+
+  /* location styles */
+
+   .location_container {
+        width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(./images/locationBackgroundDesktop.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            background-position-y: 50px;
+   }
+    /* testimonials */
+   .google_testimonials {
+       background-size: 50%;
+   }
+
+}
+
+
+/*  /////////////////////////////////// Responsive Styles/////////////////////////////////// */
+
+@media only screen and (min-width: 480px) {
+
+    /* styles adjusted for larger screens i.e. tablets and larger devices */
+
+    .container {
+        width: 80%;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* Adjust styles for laptops and larger devices */
+
+    nav {
+        height: 10px;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        background-color: #CD0000;
+        padding: 1em 0;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav_links {
+        width: 415px;
+        /* background-color: black; */
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25%;
+    }
+
+    nav a {
+        font-size: 15px;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: solid #CD0000 0.1px;
+        transition: all 0.5s;
+    }
+
+    nav a:hover {
+        font-weight: 900;
+        border-bottom: solid white 5px;
+        transition: all 0.3s;
+    }
+
+    .dropdown_menu_bar {
+        display: none;
+        width: 20px;
+        height: 10px;
+        background-color: white;
+    }
+
+    .menu {
+        display: none;
+    }
+
+
+
+
+
+    /* start landing page */
+   
+
+}

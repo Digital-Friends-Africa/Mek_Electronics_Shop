@@ -29,38 +29,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // END of function calls to (show), (navigate - prev and next)item
 
-
-// navigation buttons
-//   document.querySelector('.carousel-container').appendChild(nextButton);
-//   document.querySelector('.carousel-container').appendChild(prevButton);
-// });
-// ``
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const carousel = document.querySelector('.carousel');
-//   const carouselItems = document.querySelectorAll('.carousel-item');
-//   const nextButton = document.querySelector('.carousel_button_next');
-//   const prevButton = document.querySelector('.carousel_button_prev');
-//   let currentIndex = 0;
-
-//   function showItem(index) {
-//     const newTransformValue = -index * 100 + '%';
-//     carousel.style.transform = 'translateX(' + newTransformValue + ')';
-//   }
-
-//   function nextItem() {
-//     currentIndex = (currentIndex + 1) % carouselItems.length;
-//     showItem(currentIndex);
-//   }
-
-//   function prevItem() {
-//     currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-//     showItem(currentIndex);
-//   }
-
-//   setInterval(nextItem, 5000); // Auto-advance every 5 seconds (adjust as needed)
-
-//   // Event listeners for navigation buttons
-//   nextButton.addEventListener('click', nextItem);
-//   prevButton.addEventListener('click', prevItem);
 })
+
+
+// to toggle menu tab via clicking the menu bar located in the nav bar
+
+let menu_button = document.querySelector('#menuBar')
+ let menuList = document.querySelector('#menuList');
+
+let isToggled = false;
+
+function toggleFunction() {
+
+// toggle logic
+  if (isToggled) {
+   
+    // Code for when toggled off******
+    // // want to add the display property set to 'none'
+    menuList.style.display = "none";
+    menu_button.style.background = "url(./images/menuButton.svg)";
+    console.log("click function is working status :toggled OFF")
+
+  } else {
+    // to remove the display property or set to 'unset'
+    menuList.style.display = "unset";
+    menu_button.style.background = "url(./images/menuButtonX.svg) no-repeat";
+    menu_button.style.width = "20px";
+    console.log("click function is working status :toggled ON");
+  }
+  // Update the toggle state
+  isToggled = !isToggled;
+}
+// Add event listener for toggled states
+if (menu_button) {
+  menu_button.addEventListener('click',toggleFunction);
+  
+} else {
+  console.error('Element not found in the DOM');
+}
+
+// //    click function user side
+// menu_button.addEventListener("click", ()=>{
+//     console.log("click function is working")
+// })
+
+
+
+
