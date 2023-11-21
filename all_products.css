@@ -2,22 +2,32 @@ html {
     scroll-behavior: smooth;
 
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: all 1s;
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100vh;
+    height: auto;
     transition: all 1s;
-    background: url(./images/mekuPageUnderConstructionMobile.svg);
+    /* background: url(./images/mekuPageUnderConstructionMobile.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 150%;
+    background-size: 150%; */
 }
 
 .container {
     width: 90%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -26,7 +36,7 @@ body {
 /* Navigation Styles */
 nav {
     width: 100%;
-    height: 40px;
+    height: 50px;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -39,8 +49,22 @@ nav {
     z-index: 2;
 }
 
+.mekuNavLogo{
+    height: 20px;
+    width: 20px;
+    background: url(./images/mekuNavLogo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 nav h2 {
     font-weight: 200;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
 }
 
 .nav_links {
@@ -85,7 +109,7 @@ nav a:hover {
     width: 40%;
     height: 100%;
     /* set to display: none; while adjusting home (other component) styling */
-    display: unset;
+    display: none;
     /* toggled to display (flex) instead of (none) */
     flex-direction: column;
     align-items: center;
@@ -93,8 +117,8 @@ nav a:hover {
     justify-content: space-around;
     background-color: #44444465;
     position: fixed;
-    top: 55px;
-    left: 50%;
+    top: 50px;
+    left: 60%;
     z-index: 2;
     list-style: none;
 }
@@ -113,7 +137,220 @@ nav a:hover {
 
 .menu li {
     padding: 1em;
-    text-align: start;
+    text-align: center;
+}
+
+/* filter list */
+
+
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 3rem 0;
+    /* position: fixed;
+    z-index: 2; */
+    
+}
+
+.filter-section ul {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: solid #CD0000 1px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 1s;
+    margin-top: 55px;
+   
+}
+.filter-section ul:hover{
+    padding: 20px;
+    transition: all 0.5s;
+}
+.active,
+.tv,
+.music,
+.fridges_freezers,
+.kitchen_appliances,
+.air_conditioners {
+    color: black;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 200;
+    transition: all 1s;
+}
+
+.active:hover,
+.tv:hover,
+.music:hover,
+.fridges_freezers:hover,
+.kitchen_appliances:hover,
+.air_conditioners:hover{
+    color: #CD0000;
+    font-weight: 800;
+    transition: all 0.5s;
+}
+.products{
+    width: 300px;
+    height: auto;
+    /* background-color: black; */
+    border-top: solid #CD0000 1px;
+    border-bottom: solid #CD0000 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+}
+.product{
+    background-color: beige;
+        width: 200px;
+        height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    transition: all 1s;
+}
+
+/* ////////// */
+.product1_container,
+.product2_container,
+.product3_container,
+.product4_container {
+    background-color: white;
+    width: 220px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 15px 0px rgba(219, 219, 219, 0.75);
+    transition: all 1s;
+}
+
+.product1_container:hover,
+.product2_container:hover,
+.product3_container:hover,
+.product4_container:hover {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 2px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s;
+}
+
+.product_cards_container img {
+    width: 50%;
+    transition: all 2s;
+}
+
+.product_cards_container img:hover {
+    width: 60%;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.product_cards_container .description {
+    font-weight: 800;
+}
+
+
+/* START of footer*/
+footer {
+    height: 468px;
+    background-color: #CD0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.white_bar {
+    width: 100%;
+    height: 6.7px;
+    background-color: white;
+    justify-self: flex-start;
+
+}
+
+footer h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+.star_bar_divider {
+    width: 80%;
+    height: 20px;
+    background: url(./images/starBar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+footer p {
+    color: white;
+}
+
+.social_container {
+    width: 150px;
+    height: 33px;
+    /* border: solid white 1px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social_facebook,
+.social_instagram {
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid white 1px;
+    text-align: center;
+}
+
+.social_facebook {
+    background: url(./images/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.social_instagram {
+    background: url(./images/Instagram.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.end_point_copyright {
+    color: white;
+    justify-self: flex-end;
+}
+
+.end_point_copyright a {
+    color: yellow;
+    text-decoration: none;
+    transition: all 0.8s;
+}
+
+.end_point_copyright a:hover {
+    letter-spacing: 0.08cm;
+    transition: all 0.5s;
 }
 
 
@@ -129,10 +366,10 @@ nav a:hover {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             height: 100vh;
             transition: all 1s;
-            background: url(./images/mekuPageUnderConstruction.svg);
+            /* background: url(./images/mekuPageUnderConstruction.svg);
             background-repeat: no-repeat;
             background-position: center;
-            background-size: cover;
+            background-size: cover; */
         }
     .container {
         width: 80%;
@@ -274,25 +511,49 @@ nav a:hover {
 
 /* START new arrivals page */
 
-  .new_arrivals_page {
-      width: 100%;
-      height: 650px;
-      background-color: #CD0000;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 10px 0px 30px 0px;
-  }
-  .new_arrivals_page h2{
-    color: white;
-  }
-  .new_arrivals_page p{
-    color: white;
-    font-size: 4rem;
-  }
+/* /////////////////////////////////////I WAS HERE!!!! */
+
+.filter-section{
+    flex-direction: column;
+    /* border: solid yellow 2px; */
+    height: auto;
+
+}
+
+.products {
+    width: 90%;
+    height: auto;
+    background-color:unset;
+    border-top: solid #CD0000 10px;
+    border-bottom: solid #CD0000 10px;
+    border-left: solid #cd00000f 0.1px;
+    border-right: solid #cd00000f 0.1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.product {
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 50px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+
+  
   .product_cards_container{
     height: 400px;
-    width: 100% ;
-    background-color: #CD0000;
+    width: auto ;
+    /* background-color: blue; */
     flex-direction: row;
     padding: 0px 0px;
   }
@@ -303,7 +564,7 @@ nav a:hover {
   .product4_container {
       padding: 0px 15px;
       border-radius: 10px;
-      box-shadow: 2px 10px 15px 0px rgba(68, 10, 10, 0.75);
+      box-shadow: 2px 10px 15px 0px rgba(199, 195, 195, 0.571);
       transition: all 1s;
   }
 
@@ -319,6 +580,7 @@ nav a:hover {
       transition: all 0.5s;
   }
 
+/* /////////////////////////////////////I WAS HERE!!!! */
   /* location styles */
 
    .location_container {
@@ -355,6 +617,17 @@ nav a:hover {
     nav {
         flex-direction: row;
         align-items: center;
+    }
+
+    footer {
+            height: 468px;
+            width: 100%;
+            background-color: #CD0000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 5px 0px;
     }
 }
 
