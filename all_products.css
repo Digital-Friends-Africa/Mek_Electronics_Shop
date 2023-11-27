@@ -18,6 +18,7 @@ body {
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: auto;
+    width: 100vw;
     transition: all 1s;
     /* background: url(./images/mekuPageUnderConstructionMobile.svg);
     background-repeat: no-repeat;
@@ -26,16 +27,19 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 
 /* Navigation Styles */
 nav {
-    width: 100%;
+    width: 100vw;
     height: 50px;
     color: white;
     display: flex;
@@ -99,15 +103,15 @@ nav a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transition: all 1s;
+    transition: all 0s;
 }
 
 /* menu hidden until toggled with (dropdown menu bar) */
 
 
 .menu {
-    width: 40%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     /* set to display: none; while adjusting home (other component) styling */
     display: none;
     /* toggled to display (flex) instead of (none) */
@@ -115,12 +119,37 @@ nav a:hover {
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    background-color: #44444465;
+    background-color: #CD0000;
     position: fixed;
     top: 50px;
-    left: 60%;
+    left: 0%;
     z-index: 2;
     list-style: none;
+}
+.whatsappLink {
+    background-color: greenyellow;
+    background: url(./images/whatsappLink.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50% 20% 20%;
+    position: fixed;
+    z-index: 3;
+    right: 3%;
+    top: 50%;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.whatsappLink:hover {
+    width: 70px;
+    height: 70px;
+    transition: all 0.5s;
 }
 
 .menu a {
@@ -145,6 +174,8 @@ nav a:hover {
 
 
 .filter-section {
+    width: auto;
+    /* background-color: yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,6 +188,9 @@ nav a:hover {
 }
 
 .filter-section ul {
+    width: 95vw;
+    flex-wrap: wrap;
+    justify-content: center;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -274,6 +308,8 @@ footer {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    width: 100vw;
+
 }
 
 .white_bar {
@@ -646,6 +682,9 @@ footer p {
         justify-content: space-around;
         align-items: center;
     }
+    .whatsappLink{
+        right: 0.5%;
+    }
 
     .nav_links {
         width: 415px;
@@ -680,10 +719,14 @@ footer p {
         display: none;
     }
 
+    .filter-section ul{
+        width: 50vw;
+        padding: 10px;
+    }
 
-
-
-
+    footer {
+        width: 100vw;
+    }
     /* start landing page */
    
 
